@@ -10,35 +10,38 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import model.DbUser;
+import model.UserModel;
 
 public class RegisterServlet extends HttpServlet {
        
          @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html");
-        
-        PrintWriter out = resp.getWriter();
-        
-        out.println("<html>"
-             + "<body bgcolor='lightblue'"
-             + "<table style='width:100%; height:100vh; text-align:center;'>"
-             + "<tr><td style='text-align:center;  vertical-align:middle;'>"
-             + "<div>"
-             + "<table border=1 style='margin:0 auto; width:300px;' font-size:19>"
-             + "<tr><th colspan=2> REGITRATION FORM "+ "</th></tr>"
-             + "<form action='reginsert' method='POST'>"
-             + "<tr><td>User id </td><td><input type='text' name='id'/></td></tr>"
-             + "<tr><td>Name </td><td><input type='text' name='nm'/></td></tr>"
-             + "<tr><td>Email id</td><td><input type='text' name='email'/></td></tr>"
-             + "<tr><td>Password</td><td><input type='password' name='pwd'/></td></tr>"
-             + "<tr><td colspan=2><center><input type='submit' name='submit'/></center></td></tr>"
-             + "</table>"
-             + "</div>"
-             + "</td>"
-             + "</tr>"
-             + "</table>"
-             + "</body>"
-             + "</html>");
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        UserModel newUser = new UserModel();
+        newUser.setId(Integer.parseInt(req.getParameter("txtId")));
+        newUser.setName(req.getParameter("txtName"));
+        newUser.setEmail(req.getParameter("txtEmail"));
+        newUser.setPassword(req.getParameter("txtPassword"));
+        newUser.setCreated_at(System.currentTimeMillis());
+       PrintWriter out = resp.getWriter();
+        try{
+        if (validateData(newUser, resp)) {
+            DbUser dbUser = new DbUser();
+            
+            
+            if (dbUser.addUser(newUser)) {                
+                out.print("<h6>user Registered!!</h6>");
+            }else{
+                out.print("<h6>Error in Insertion!!</h6>");
+            }
+        }
+        }catch(Exception e){
+            out.println(e.getMessage());
+        }
     }
-
+    private boolean validateData(UserModel user, HttpServletResponse resp) {
+        boolean flag = false;
+        // validation login pending
+        return true;
+    }
 }
