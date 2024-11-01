@@ -11,20 +11,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     </head>
     <body bgcolor="lightblue">
         <form action='LoginServlet' method='POST'>
-          
-                
-                        <div>
-                            <table border=1 style='margin:0 auto; width:300px;font-size:30'>                            
-                                <tr><td>Email id</td><td><input type='text' value='Enter email' name='txtEmail'/></td></tr>
-                                <tr><td>Password</td><td><input type='password' value='pwd' name='txtPassword'/></td></tr>
-                                
-                            </table>
-                            <center><input type='submit' name='btnSubmit'/>
-                                
-                        </div>
-                        
-               
-            
+            <div>
+                <table border=1 style='margin:0 auto; width:300px;font-size:30'>                            
+                    <tr><td>Email id</td><td><input type='text' placeholder='Enter email id' name='txtEmail'/></td></tr>
+                    <tr><td>Password</td><td><input type='password' placeholder='Enter Password' name='txtPassword'/></td></tr>
+
+                </table>
+                <center><input type='submit' name='btnSubmit'/> <br />
+                    Don't Have an Account? <a href="registration.html">Click Here.</a>
+
+            </div>            
+
         </form>
     </body>
 </html>

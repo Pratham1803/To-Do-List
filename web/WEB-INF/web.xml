@@ -2,50 +2,28 @@
 <web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
     <servlet>
         <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>user.RegisterServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>reginsert</servlet-name>
-        <servlet-class>user.reginsert</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>DbUser</servlet-name>
-        <servlet-class>model.DbUser</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>UserModel</servlet-name>
-        <servlet-class>model.UserModel</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>TaskModel</servlet-name>
-        <servlet-class>model.TaskModel</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>user.LoginServlet</servlet-class>
+        <servlet-class>servlet.RegisterServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>reginsert</servlet-name>
-        <url-pattern>/reginsert</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>DbUser</servlet-name>
-        <url-pattern>/DbUser</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>UserModel</servlet-name>
-        <url-pattern>/UserModel</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>TaskModel</servlet-name>
-        <url-pattern>/TaskModel</url-pattern>
-    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>servlet.LoginServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>      
+    
+    <servlet>
+        <servlet-name>DashboardServlet</servlet-name>
+        <servlet-class>servlet.DashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DashboardServlet</servlet-name>
+        <url-pattern>/Dashboard</url-pattern>
+    </servlet-mapping>                 
 </web-app>

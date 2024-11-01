@@ -1,35 +1,41 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 package model;
 
 import java.sql.Date;
 
 public class TaskModel {
-    private String task_id;
+    private int task_id;
+    private int user_id;    
     private String task_name;
     private String description;
-    private boolean is_complete;
+    private int is_complete;
     private Date date;
 
     public TaskModel() {
     }
 
-    public TaskModel(String task_id, String task_name, String description, boolean is_complete, Date date) {
+    public TaskModel(int task_id, int user_id, String task_name, String description, int is_complete, Date date) {
         this.task_id = task_id;
+        this.user_id = user_id;
         this.task_name = task_name;
         this.description = description;
         this.is_complete = is_complete;
         this.date = date;
     }
-    
-    public String getTask_id() {
+
+    public int getTask_id() {
         return task_id;
     }
 
-    public void setTask_id(String task_id) {
+    public void setTask_id(int task_id) {
         this.task_id = task_id;
+    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     public String getTask_name() {
@@ -48,11 +54,11 @@ public class TaskModel {
         this.description = description;
     }
 
-    public boolean isIs_complete() {
+    public int getIs_complete() {
         return is_complete;
     }
 
-    public void setIs_complete(boolean is_complete) {
+    public void setIs_complete(int is_complete) {
         this.is_complete = is_complete;
     }
 
@@ -62,5 +68,5 @@ public class TaskModel {
 
     public void setDate(Date date) {
         this.date = date;
-    }
+    }       
 }

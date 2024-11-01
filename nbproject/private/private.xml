@@ -2,19 +2,10 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group/>
-=======
         <group>
-            <file>file:/C:/Users/DC/OneDrive/Documents/NetBeansProjects/To-Do-List/src/java/model/DbUser.java</file>
-            <file>file:/C:/Users/DC/OneDrive/Documents/NetBeansProjects/To-Do-List/src/java/model/TaskModel.java</file>
-            <file>file:/C:/Users/DC/OneDrive/Documents/NetBeansProjects/To-Do-List/src/java/user/RegisterServlet.java</file>
-            <file>file:/C:/Users/DC/OneDrive/Documents/NetBeansProjects/To-Do-List/web/index.html</file>
-            <file>file:/C:/Users/DC/OneDrive/Documents/NetBeansProjects/To-Do-List/web/registration.html</file>
-            <file>file:/C:/Users/DC/OneDrive/Documents/NetBeansProjects/To-Do-List/src/java/model/UserModel.java</file>
-            <file>file:/C:/Users/DC/OneDrive/Documents/NetBeansProjects/To-Do-List/src/java/user/LoginServlet.java</file>
-            <file>file:/C:/Users/DC/OneDrive/Documents/NetBeansProjects/To-Do-List/web/Login.html</file>
+            <file>file:/C:/Users/prath/OneDrive%20-%20Charotar%20University/MCA%20Material/SEM%201/Enterprise%20Computing%20using%20Java%20EE/Case%20Study/To-Do/src/java/model/TaskModel.java</file>
+            <file>file:/C:/Users/prath/OneDrive%20-%20Charotar%20University/MCA%20Material/SEM%201/Enterprise%20Computing%20using%20Java%20EE/Case%20Study/To-Do/src/java/servlet/DashboardServlet.java</file>
+            <file>file:/C:/Users/prath/OneDrive%20-%20Charotar%20University/MCA%20Material/SEM%201/Enterprise%20Computing%20using%20Java%20EE/Case%20Study/To-Do/src/java/model/DbTask.java</file>
         </group>
->>>>>>> e934099d6f1844d49de5763d6d3449538ff63097
     </open-files>
 </project-private>
