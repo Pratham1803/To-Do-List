@@ -19,23 +19,22 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            PrintWriter out = resp.getWriter();
-                
-            String email=(req.getParameter("txtEmail"));
-            String pass=(req.getParameter("txtPassword"));
-            
-            DbUser dbUser = new DbUser();
-            UserModel newUser = dbUser.getUser(email,pass);
-            
-            if(newUser!=null){
-                HttpSession session = req.getSession();
-                session.setAttribute("userId", newUser.getId());
-                
-                resp.sendRedirect("Dashboard");
-            }
-            else{
-                 req.setAttribute("Error Message", "INVALID EMAIL OR PASSWORD");
-                 req.getRequestDispatcher("Login.html").forward(req, resp);
-            }
+        PrintWriter out = resp.getWriter();
+
+        String email = (req.getParameter("txtEmail"));
+        String pass = (req.getParameter("txtPassword"));
+
+        DbUser dbUser = new DbUser();
+        UserModel newUser = dbUser.getUser(email, pass);
+
+        if (newUser != null) {
+            HttpSession session = req.getSession();
+            session.setMaxInactiveInterval(30 * 60); // Timeout value in seconds (30 minutes)
+            session.setAttribute("userId", newUser.getId());
+            resp.sendRedirect("Dashboard.jsp");
+        } else {
+            req.setAttribute("Error Message", "INVALID EMAIL OR PASSWORD");
+            req.getRequestDispatcher("index.html").forward(req, resp);
         }
     }
+}

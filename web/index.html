@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
 <html>
     <head>
-        <title>To-DO List</title>
+        <title>Login To-Do</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        Are You New User? <a href="registration.html"> Click Here To Register </a> <br />
-        Already Registered? <a href="Login.html"> Click Here To Login </a> <br />
+    <body bgcolor="lightblue">
+        <form action='LoginServlet' method='POST'>
+            <div>
+                <table border=1 style='margin:0 auto; width:300px;font-size:30'>                            
+                    <tr><td>Email id</td><td><input type='text' placeholder='Enter email id' name='txtEmail'/></td></tr>
+                    <tr><td>Password</td><td><input type='password' placeholder='Enter Password' name='txtPassword'/></td></tr>
+
+                </table>
+                <center><input type='submit' name='btnSubmit'/> <br />
+                    Don't Have an Account? <a href="registration.html">Click Here.</a>
+
+            </div>            
+
+        </form>
     </body>
 </html>
